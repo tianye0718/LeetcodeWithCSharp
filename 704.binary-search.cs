@@ -52,17 +52,15 @@ public class Solution {
     public int Search(int[] nums, int target) {
         int min = 0;
         int max = nums.Length - 1;
-        int guess;
         while (min <= max)
         {
-            guess = (min + max) / 2;
-            if (nums[guess] == target) {
-                return guess;
-            } else if (nums[guess] > target)
+            if (nums[(min + max) / 2] == target) {
+                return (min + max) / 2;
+            } else if (nums[(min + max) / 2] > target)
             {
-                max = guess - 1;
+                max = (min + max) / 2 - 1;
             } else {
-                min = guess + 1;
+                min = (min + max) / 2 + 1;
             }
         }
         return -1;
