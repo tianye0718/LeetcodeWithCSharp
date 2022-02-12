@@ -69,7 +69,7 @@
 // @lc code=start
 public class Solution
 {
-    // use x & (x-1) to remove 1 in the last bit
+    // use x & (x-1) to remove last 1
     // public int[] CountBits(int n)
     // {
     //     int[] bits = new int[n + 1];
